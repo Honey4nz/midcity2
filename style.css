@@ -221,10 +221,23 @@ span {
   background-color: #212121;
   padding: 50px 0px;
 }
+.footer span,
+.footer h1 {
+  margin: 0;
+  font: 200 20px "Roboto";
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fecb0a;
+  font: 200 15px "Roboto";
+}
 .footer > div {
   display: flex;
   justify-content: space-around;
 }
+
 .left-footer {
   display: flex;
   flex-direction: column;
@@ -238,9 +251,20 @@ span {
 .right-footer {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   justify-content: space-around;
 }
 .right-footer > img {
-  width: 50px;
+  width: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.right-footer > p {
+  line-height: 50px;
+  color: white;
+  font-size: 17px;
+  margin: 0;
+}
+.copy-right {
+  font: 200 13px "Roboto" !important;
+  text-align: center;
 }
