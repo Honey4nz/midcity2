@@ -6,6 +6,10 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -25,7 +29,21 @@
               <img src="./assets/midcity.png" alt="Logo" />
             </div>
             <div class="navbar-menu">
-              <ul>
+              <div class="mobile-menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i> <span>Menu</span>
+              </div>
+              <ul class="menu-desktop-list">
+                <a href="#"><li>ABOUT US</li></a>
+                <a href="#"> <li>SERVICES</li></a>
+                <a href="#"><li>WOF CHECKS</li></a>
+                <a href="#"><li>COF CHECKS</li></a>
+                <a href="#"><li>CONTACT US</li></a>
+              </ul>
+              <ul class="menu-mobile-list">
+                <div class="menu-close" onclick="closeMenu()">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+
                 <a href="#"><li>ABOUT US</li></a>
                 <a href="#"> <li>SERVICES</li></a>
                 <a href="#"><li>WOF CHECKS</li></a>
@@ -235,6 +253,10 @@
       </div>
     </div>
     <div class="footer">
+      <button class="scroll-up" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+
       <div>
         <div class="left-footer">
           <img src="./assets/midcity.png" />
@@ -257,7 +279,7 @@
       <div>
         <span class="copy-right">
           Copyright 2024 Mid City Auto Repairs <br />
-          Website designed by @ MTM
+          Website designed by @ HM
         </span>
       </div>
     </div>
