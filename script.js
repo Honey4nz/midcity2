@@ -3,7 +3,9 @@
 const updateDots = () => {
   const screenWidth = window.innerWidth;
   const dotCotainer = document.querySelector(".dot-container");
+
   dotCotainer.innerHTML = "";
+
   if (screenWidth >= 1150) {
     for (let i = 0; i < 2; i++) {
       const span = document.createElement("span");
@@ -31,7 +33,7 @@ const updateDots = () => {
   // Make the first dot selected initially
   const dotElements = document.querySelectorAll(".dot");
   if (dotElements.length > 0) {
-    dotElements[0].classList.add("selected");
+    dotElements[0].classList.add("dot-selected");
   }
 
   const width = document
@@ -40,9 +42,9 @@ const updateDots = () => {
   //add eventListner to move scroll left and add a select class
   dotElements.forEach((dot, i) => {
     dot.addEventListener("click", () => {
-      dotElements.forEach((dot) => dot.classList.remove("selected"));
+      dotElements.forEach((dot) => dot.classList.remove("dot-selected"));
 
-      dot.classList.add("selected");
+      dot.classList.add("dot-selected");
 
       document.querySelector(".testimonial-main").scrollTo({
         left: width * i,
@@ -56,9 +58,9 @@ const updateDots = () => {
     dotElements.forEach((dot, i) => {
       const scrollLeft = document.querySelector(".testimonial-main").scrollLeft;
       const index = Math.round(scrollLeft / width); // Calculate which section is visible
-      dot.classList.remove("selected");
+      dot.classList.remove("dot-selected");
       if (i === index) {
-        dot.classList.add("selected");
+        dot.classList.add("dot-selected");
       }
     });
   });
@@ -85,7 +87,6 @@ const menu = document.querySelector(".menu-mobile-list");
 const desktopMenu = document.querySelector(".menu-desktop-list");
 const mobileMenuIcon = document.querySelector(".mobile-menu");
 const openMenu = () => {
-  console.log("hello");
   menu.style.right = "0px";
 };
 
@@ -122,10 +123,8 @@ const loader = () => {
 const checkLocation = () => {
   const location = window.location.pathname;
   const elements = document.querySelectorAll(".navbar a");
-
   elements.forEach((item) => {
     const linkPath = item.pathname;
-    console.log(linkPath, location);
     if (location === linkPath) {
       const liElement = item.querySelector("li");
       liElement.classList.add("selected");
@@ -141,8 +140,9 @@ window.onload = () => {
     const loaderContainer = document.querySelector(".loaderContainer");
     setTimeout(() => (loaderContainer.style.display = "none"), 500);
   })();
-
-  updateDots();
+  if (window.location.pathname === "/index.html") {
+    updateDots();
+  }
 };
 
 window.addEventListener("resize", updateDots);

@@ -91,7 +91,7 @@
   width: 0px;
   position: absolute;
   background-color: #fecb0a;
-  bottom: -2px;
+  bottom: 0px;
   left: 0;
   height: 3px;
   border-radius: 3px;
@@ -277,6 +277,10 @@
   border-top: 4px solid #fecb0a;
   animation: spin 1s linear infinite;
 }
+.selected {
+  color: #fecb0a;
+  border-bottom: 3px solid #fecb0a;
+}
 
 @media (max-width: 1050px) {
   .heading {
@@ -298,12 +302,7 @@
     margin-right: 50px;
     cursor: pointer;
   }
-  /* .menu-mobile-list a {
-    width: 100%;
-  }
-  .menu-mobile-list a:hover::after {
-    width: 100%;
-  } */
+
   .logo {
     margin-left: 50px;
   }
@@ -319,6 +318,14 @@
   }
   .menu-desktop-list {
     display: none;
+  }
+  .header-top-section {
+    height: 100px;
+    padding: 0 10px;
+  }
+  .middle-section > p {
+    width: 100%;
+    text-align: center;
   }
 }
 @media (max-width: 750px) {
