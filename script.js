@@ -85,6 +85,7 @@ const menu = document.querySelector(".menu-mobile-list");
 const desktopMenu = document.querySelector(".menu-desktop-list");
 const mobileMenuIcon = document.querySelector(".mobile-menu");
 const openMenu = () => {
+  console.log("hello");
   menu.style.right = "0px";
 };
 
@@ -92,7 +93,7 @@ const closeMenu = () => {
   menu.style.right = "-600px";
 };
 
-const mediaQuery = window.matchMedia("(max-width:915px)");
+const mediaQuery = window.matchMedia("(max-width:1000px)");
 mediaQuery.addEventListener("change", () => {
   if (mediaQuery.matches) {
     // menu.style.display = "flex";
@@ -117,10 +118,26 @@ const loader = () => {
   loaderContainer.appendChild(loaderElement);
 };
 
+//selected item
+const checkLocation = () => {
+  const location = window.location.pathname;
+  const elements = document.querySelectorAll(".navbar a");
+
+  elements.forEach((item) => {
+    const linkPath = item.pathname;
+    console.log(linkPath, location);
+    if (location === linkPath) {
+      const liElement = item.querySelector("li");
+      liElement.classList.add("selected");
+    }
+  });
+};
+
 window.onload = () => {
   //anonymus function for
   (function () {
     loader(); //show loader
+    checkLocation();
     const loaderContainer = document.querySelector(".loaderContainer");
     setTimeout(() => (loaderContainer.style.display = "none"), 500);
   })();
