@@ -5,6 +5,10 @@
   font-size: 18px;
 }
 
+.container {
+  background-color: #fecb0a;
+}
+
 .header-top-section {
   background-color: #fecb0a;
   height: 60px;
@@ -22,37 +26,81 @@
 }
 .overlay {
   width: 100%;
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.911);
+  height: 600px;
+  background-image: url("./assets/warrant-of-fitness.jpeg");
+  background-size: cover;
 }
 .overlay-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  height: 100px;
+  background-color: rgba(0, 0, 0, 0.363);
+  height: 600px;
 }
-.profile-pic {
-  width: 600px;
-  border-radius: 50px 0px 40px 0px;
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  padding-left: 50px;
+  justify-content: space-evenly;
+  margin: 0 auto;
 }
 .profile-section {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 100px 0;
   gap: 50px;
-  text-align: left;
-  height: 100%;
-  /* background-color: #fec90ab4; */
-  /* box-shadow: 1px 1px 9px 2px; */
-  border-radius: 50px 0px 40px 0px;
 }
-.profile-section > p {
-  width: 700px;
-  border-radius: 20px;
-  font-family: "Mukta", sans-serif;
-  font-size: 15px;
-  padding: 20px;
+.profile-pic {
+  width: 500px;
+  position: absolute;
+  right: 0;
+  animation: carAnimation 1s ease forwards;
+  animation-delay: 1s;
+}
+@keyframes carAnimation {
+  0% {
+    right: 0px;
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    right: 400px;
+    transform: rotate(-0deg);
+  }
+}
+
+.profile-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 500px;
+  gap: 50px;
+  background-color: #fecb0a;
+}
+.profile-section > div > p {
+  font-size: 18px;
   color: rgba(0, 0, 0, 0.589);
+  margin: 0;
+}
+.profile-section > div > h2 {
+  font: 200 40px "Roboto";
+  margin: 0;
+}
+.profile-section > div > button {
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 .middle-section > h2 {
   font: 200 40px "Roboto";
@@ -128,46 +176,6 @@
 }
 .navbar-menu a:hover::after {
   width: 100%;
-}
-
-.middle-section {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 50px auto;
-  gap: 50px;
-  align-items: center;
-  max-width: 1400px;
-}
-
-.list-services > .section-1 {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  gap: 70px;
-}
-.section-1 > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-.section-1 > div > img {
-  width: 200px;
-}
-.section-1 > div > h2 {
-  font: 200 30px "Roboto";
-  margin: 0;
-}
-.section-1 > div > p {
-  color: rgba(0, 0, 0, 0.671);
-  margin: 0;
-}
-
-.list-services img {
-  width: 70%;
-  border-radius: 20px;
 }
 
 .footer {
@@ -306,17 +314,26 @@
   color: #fecb0a;
   border-bottom: 3px solid #fecb0a;
 }
+@keyframes smallScreen {
+}
+@media (max-width: 3000px) {
+  .middle-section {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1500px) {
+  .middle-section {
+    flex-direction: column;
+  }
+  .profile-pic {
+    position: relative;
+    animation: carAnimation 1s ease backwards;
+  }
+}
 @media (max-width: 1350px) {
   .profile-section {
     flex-direction: column;
     align-items: center;
-  }
-}
-@media (max-width: 1050px) {
-  .section-1 {
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
   }
 }
 
@@ -352,6 +369,10 @@
     width: 100%;
     text-align: center;
   }
+  .heading > h1 {
+    font-size: 10vw;
+    text-align: center;
+  }
 }
 @media (max-width: 750px) {
   .footer > div {
@@ -370,23 +391,19 @@
   .menu-mobile-list {
     padding: 50px;
   }
-  .profile-pic {
-    width: 80%;
-  }
+
   .profile-section > p {
     width: 100%;
+  }
+  .profile-section > div {
+    width: 100%;
+  }
+  .middle-section {
+    padding: 0px;
   }
 }
 
 @media (max-width: 550px) {
-  .list-services {
-    display: block;
-  }
-
-  .list-services > div > img {
-    display: block;
-    width: 100px;
-  }
   .logo {
     margin-left: 10px;
   }
@@ -395,6 +412,9 @@
   }
   .menu-mobile-list {
     width: 100%;
+  }
+  .profile-pic {
+    width: 300px;
   }
 }
 
@@ -414,16 +434,5 @@
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 600px) {
-  .list-services > .section-1 {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .section-1 > div {
-    width: 80%;
   }
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="wofChecks.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-top-section">
+          <p>
+            In a hurry? Message us on
+            <a href="tel:021 125 4332">021 125 4332</a> and we’ll get back to
+            you.
+          </p>
+        </div>
+      </div>
+      <div class="overlay">
+        <div class="overlay-text">
+          <div class="navbar">
+            <div class="logo">
+              <img src="./assets/midcity.png" alt="Logo" />
+            </div>
+            <div class="navbar-menu">
+              <div class="mobile-menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i> <span>Menu</span>
+              </div>
+              <ul class="menu-desktop-list">
+                <a href="/"><li>HOME</li></a>
+                <a href="./aboutUs.html"><li>ABOUT US</li></a>
+                <a href="./services.html"> <li>SERVICES</li></a>
+                <a href="./wofChecks.html"><li>WOF CHECKS</li></a>
+                <a href="./cofChecks.html"><li>COF CHECKS</li></a>
+                <a href="./contactUs.html"><li>CONTACT US</li></a>
+              </ul>
+              <ul class="menu-mobile-list">
+                <div class="menu-close" onclick="closeMenu()">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <a href="/"><li>HOME</li></a>
+                <a href="./aboutUs.html"><li>ABOUT US</li></a>
+                <a href="./services.html"> <li>SERVICES</li></a>
+                <a href="./wofChecks.html"><li>WOF CHECKS</li></a>
+                <a href="./cofChecks.html"><li>COF CHECKS</li></a>
+                <a href="./contactUs.html"><li>CONTACT US</li></a>
+              </ul>
+            </div>
+          </div>
+          <div class="heading"><h1>WARRANT OF FITNESS</h1></div>
+        </div>
+      </div>
+      <div class="middle-section">
+        <div class="profile-section">
+          <div>
+            <h2>Certificate of Fitness (CoF) for Your Car</h2>
+            <p>
+              We also provide a Certificate of Fitness for your car. A
+              certificate of fitness (CoF) is a regular check to ensure that
+              your vehicle meets the required safety standards. Vehicles
+              requiring this certification are all passenger service vehicles
+              such as Ubers and taxis and rental vehicles. A Certificate of
+              Fitness is similar to a Warrant of Fitness – it ensures your car
+              is fully functional, roadworthy and safe for passengers.
+            </p>
+            <button>BOOK NOW</button>
+          </div>
+        </div>
+        <img class="profile-pic" src="./assets/brokencar.png" />
+      </div>
+      <div class="footer">
+        <button class="scroll-up" onclick="scrollToTop()">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <div>
+          <div class="left-footer">
+            <img src="./assets/midcity.png" />
+            <h1>CONTACT US</h1>
+            <a href="tel:021 125 4332"><span>Ph: </span>021 125 4332 </a>
+            <a href=""
+              ><span>A:</span> 30 Sydney Street, Petone Wellington 5012</a
+            >
+          </div>
+          <div class="right-footer">
+            <h1>FOLLOW US</h1>
+            <img src="./assets/facebook.png" />
+            <p>HOURS</p>
+            <p>
+              Mon – Fri: 8:30am – 5:00pm <br />Sat: 8:30am – 2:00pm <br />Sun –
+              9:00am – 12:00pm
+            </p>
+          </div>
+        </div>
+        <div>
+          <span class="copy-right">
+            Copyright 2024 Mid City Auto Repairs <br />
+            Website designed by @ HM
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
