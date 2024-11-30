@@ -182,7 +182,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.right-footer > img {
+.right-footer > a > img {
   width: 25px;
   margin-top: 10px;
   cursor: pointer;

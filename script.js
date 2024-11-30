@@ -135,16 +135,34 @@ const scrollEvent = () => {
   }
 };
 
+// function to get parameter value
+const getParam = (param) => {
+  const urlParam = new URLSearchParams(window.location.search); // this will give us object of urlsearchparam
+  return urlParam.get(param); // this will give us value based on passed param
+};
+
 window.onload = () => {
-  //anonymus function for
-  (function () {
-    loader(); //show loader
-    checkLocation();
-    const loaderContainer = document.querySelector(".loaderContainer");
-    setTimeout(() => (loaderContainer.style.display = "none"), 150);
-  })();
+ 
+  (
+    //anonymus function for
+    function () {
+      loader(); //show loader
+      checkLocation();
+      const loaderContainer = document.querySelector(".loaderContainer");
+      setTimeout(() => (loaderContainer.style.display = "none"), 150);
+    }
+  )();
   if (window.location.pathname === "/") {
     updateDots();
+  }
+
+  if (window.location.pathname === "/contactUs.html") {
+    const result = getParam("message_sent");
+    if (result) {
+      alert("Message Sent Successfully");
+    } else {
+      return;
+    }
   }
 };
 
