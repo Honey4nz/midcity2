@@ -58,8 +58,6 @@
   width: 500px;
   position: absolute;
   right: 0;
-  animation: carAnimation 1s ease forwards;
-  animation-delay: 1s;
 }
 @keyframes carAnimation {
   0% {
@@ -314,8 +312,7 @@
   color: #fecb0a;
   border-bottom: 3px solid #fecb0a;
 }
-@keyframes smallScreen {
-}
+
 @media (max-width: 3000px) {
   .middle-section {
     justify-content: space-between;
@@ -327,7 +324,6 @@
   }
   .profile-pic {
     position: relative;
-    animation: carAnimation 1s ease backwards;
   }
 }
 @media (max-width: 1350px) {
@@ -399,7 +395,7 @@
     width: 100%;
   }
   .middle-section {
-    padding: 0px;
+    padding: 0;
   }
 }
 

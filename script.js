@@ -131,6 +131,20 @@ const checkLocation = () => {
     }
   });
 };
+//this is for car animation to work on specific scroll
+
+const scrollEvent = () => {
+  const element = document.querySelector(".profile-pic");
+  const elementPosition = element.getBoundingClientRect().top;
+  const elementHeight = element.offsetHeight; // Get element height
+  const scrollPosition = window.scrollY + window.innerHeight;
+
+  if (scrollPosition >= elementPosition - elementHeight) {
+    setTimeout(() => {
+      element.style.animation = "carAnimation 1s ease";
+    }, 1000);
+  }
+};
 
 window.onload = () => {
   //anonymus function for
@@ -144,5 +158,5 @@ window.onload = () => {
     updateDots();
   }
 };
-
+window.addEventListener("scroll", scrollEvent);
 window.addEventListener("resize", updateDots);
