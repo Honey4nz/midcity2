@@ -140,7 +140,7 @@ window.onload = () => {
     const loaderContainer = document.querySelector(".loaderContainer");
     setTimeout(() => (loaderContainer.style.display = "none"), 500);
   })();
-  if (window.location.pathname === "/index.html") {
+  if (window.location.pathname === "/") {
     updateDots();
   }
 };

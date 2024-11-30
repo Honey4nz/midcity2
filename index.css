@@ -406,7 +406,7 @@ span {
 
 .menu-mobile-list > a {
   color: black;
-  width: 162px;
+  width: max-content;
 }
 .menu-mobile-list > a > li {
   font-size: 25px;
