@@ -2,30 +2,23 @@
 
 const updateDots = () => {
   const screenWidth = window.innerWidth;
-  const dotCotainer = document.querySelector(".dot-container");
-  dotCotainer.innerHTML = "";
+  const dotContainer = document.querySelector(".dot-container");
+  dotContainer.innerHTML = ""; // Clear existing dots
 
+  let numDots;
   if (screenWidth >= 1150) {
-    for (let i = 0; i < 2; i++) {
-      const span = document.createElement("span");
-      span.classList.add("dot");
-      const dotCotainer = document.querySelector(".dot-container");
-      dotCotainer.appendChild(span);
-    }
-  } else if (screenWidth >= 750 && screenWidth < 1150) {
-    for (let i = 0; i < 3; i++) {
-      const span = document.createElement("span");
-      span.classList.add("dot");
-      const dotCotainer = document.querySelector(".dot-container");
-      dotCotainer.appendChild(span);
-    }
+    numDots = 2;
+  } else if (screenWidth >= 750) {
+    numDots = 3;
   } else {
-    for (let i = 0; i < 6; i++) {
-      const span = document.createElement("span");
-      span.classList.add("dot");
-      const dotCotainer = document.querySelector(".dot-container");
-      dotCotainer.appendChild(span);
-    }
+    numDots = 6;
+  }
+
+  // Create dots
+  for (let i = 0; i < numDots; i++) {
+    const span = document.createElement("span");
+    span.classList.add("dot");
+    dotContainer.appendChild(span);
   }
 
   // Make the first dot selected initially

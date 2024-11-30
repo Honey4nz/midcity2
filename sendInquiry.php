@@ -16,7 +16,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-$subject = $_POST["subject"];
+$make = $_POST["make"];
+$regNumber = $_POST["regNumber"];
 $phone = $_POST["phone"];
 $message = $_POST["message"];
 
@@ -47,17 +48,19 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = empty($subject) ? "Inquiry" : $subject;
+    $mail->Subject = "Inquiry";
     $mail->Body    = "name :- $name <br/> 
                       email :- $email <br/>
                       phone :- $phone <br/>
+                      make  :- $make <br/>
+                      registration-number:- $regNumber <br/>
                       message :- $message <br/>";
     // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
 
         // Redirect back to contact page with success message
-        header("Location: contact.php?message_sent=true");
+        header("Location: contactUs.html?message_sent=true");
         exit();  // Prevent further script execution
     } catch (Exception $e) {
         // Handle the error (log or display error message)

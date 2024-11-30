@@ -74,22 +74,35 @@
             <h3>MID CITY AUTO REPAIRS CONTACT FORM</h3>
             <form action="./sendInquiry.php" method="POST">
               <label for="name">Full Name</label>
-              <input type="text" required id="name" minlength="2" />
+              <input type="text" required id="name" name="name" minlength="2" />
               <label for="email">Email</label>
-              <input type="email" id="email" required />
+              <input type="email" id="email" name="email" required />
               <label for="number">Phone Number</label>
-              <input id="number" type="number" required minlength="10" />
+              <input
+                id="number"
+                type="number"
+                required
+                name="phone"
+                minlength="10"
+              />
               <label for="make">Make And Model Of Vehicle </label>
-              <input type="text" required id="make" />
+              <input type="text" required id="make" name="make" />
               <label for="regNumber">Registration Number</label>
               <input
                 required
                 id="regNumber"
                 type="text"
                 placeholder="0 of 6 max chrachters."
+                name="regNumber"
               />
               <label for="message">Message</label>
-              <textarea id="message" rows="4" cols="50" required></textarea>
+              <textarea
+                id="message"
+                rows="4"
+                cols="50"
+                name="message"
+                required
+              ></textarea>
               <button type="submit">SUBMIT</button>
             </form>
           </div>
