@@ -225,8 +225,8 @@
 
 .scroll-up {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 8px;
+  right: 10px;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.411);
   border: none;

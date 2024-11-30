@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Sevillana&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Sevillana&family=Shadows+Into+Light&display=swap");
 
 * {
   box-sizing: border-box;
   font-size: 18px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .header-top-section {
@@ -23,7 +24,7 @@
 .overlay {
   width: 100%;
   height: 600px;
-  background-image: url("./assets/warrant-of-fitness.jpeg");
+  background-image: url("./assets/pexels-mikebirdy-190574.jpg");
   background-size: cover;
 }
 .overlay-text {
@@ -161,11 +162,101 @@
   max-width: 1400px;
 }
 
+.middle-section > p:nth-child(1),
+.middle-section > p:nth-child(1) > strong {
+  font-size: 35px;
+  max-width: 1000px;
+}
+
+.middle-section > p:nth-child(2) {
+  font-size: 16px;
+  max-width: 1000px;
+  color: rgba(0, 0, 0, 0.685);
+}
+.form-section > h3 {
+  font: 200 30px "Roboto";
+}
+.form-section > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+.form-section > form > label {
+  font-size: 20px;
+}
+.form-section > form > input[type="number"] {
+  -webkit-appearance: none; /* For Safari and Chrome */
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: none; /* For modern browsers */
+  margin: 0; /* Remove extra space around the input */
+}
+.form-section > form > input[type="number"]::-webkit-outer-spin-button,
+.form-section > form > input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Remove spin buttons in WebKit browsers */
+  margin: 0; /* Remove any margin */
+}
+.form-section > form > input {
+  height: 45px;
+  outline-color: #fecb0a;
+  padding-left: 10px;
+  width: 100%;
+}
+.form-section > form > textarea {
+  outline-color: #fecb0a;
+  padding: 10px;
+}
+
+.form-section > form > button {
+  background-color: #fecb0a;
+  width: 170px;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form-section > form > button:hover {
+  background-color: #fec90a86;
+  color: rgba(0, 0, 0, 0.678);
+}
+.contact-section {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  align-content: center;
+}
+.contact-info > div {
+  display: flex;
+  gap: 20px;
+}
+.contact-info > div > p {
+  margin: 0;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+.contact-info > div > img {
+  width: 40px;
+  height: 40px;
+}
+.contact-info > iframe {
+  width: 400px;
+}
+
 .footer {
   background-color: #212121;
   padding: 50px 0px;
   position: relative;
 }
+
 .footer span,
 .footer h1 {
   margin: 0;
@@ -297,10 +388,16 @@
   color: #fecb0a;
   border-bottom: 3px solid #fecb0a;
 }
-@media (max-width: 1350px) {
-  .profile-section {
+
+@media (max-width: 1100px) {
+  .contact-section {
     flex-direction: column;
-    align-items: center;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-info > iframe {
+    width: 600px;
   }
 }
 
@@ -365,6 +462,14 @@
   .profile-section > div {
     width: 100%;
   }
+  .contact-info > iframe {
+    width: 465px;
+  }
+
+  .form-section > form > textarea,
+  .form-section > form > input {
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -377,6 +482,10 @@
   .menu-mobile-list {
     width: 100%;
   }
+
+  .contact-info > iframe {
+    width: 365px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -386,6 +495,9 @@
   }
   .mobile-menu {
     gap: 5px;
+  }
+  .contact-info > iframe {
+    width: 365px;
   }
 }
 

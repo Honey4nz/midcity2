@@ -3,7 +3,6 @@
 const updateDots = () => {
   const screenWidth = window.innerWidth;
   const dotCotainer = document.querySelector(".dot-container");
-
   dotCotainer.innerHTML = "";
 
   if (screenWidth >= 1150) {
@@ -25,7 +24,6 @@ const updateDots = () => {
       const span = document.createElement("span");
       span.classList.add("dot");
       const dotCotainer = document.querySelector(".dot-container");
-      console.log(dotCotainer);
       dotCotainer.appendChild(span);
     }
   }
@@ -132,17 +130,15 @@ const checkLocation = () => {
   });
 };
 //this is for car animation to work on specific scroll
+const element = document.querySelector(".profile-pic");
 
 const scrollEvent = () => {
-  const element = document.querySelector(".profile-pic");
   const elementPosition = element.getBoundingClientRect().top;
-  const elementHeight = element.offsetHeight; // Get element height
-  const scrollPosition = window.scrollY + window.innerHeight;
-
-  if (scrollPosition >= elementPosition - elementHeight) {
+  const scrollPosition = window.scrollY;
+  if (scrollPosition >= elementPosition - window.innerHeight) {
     setTimeout(() => {
-      element.style.animation = "carAnimation 1s ease";
-    }, 1000);
+      element.style.animation = "carAnimation 2s ease ";
+    }, 500);
   }
 };
 
@@ -152,11 +148,17 @@ window.onload = () => {
     loader(); //show loader
     checkLocation();
     const loaderContainer = document.querySelector(".loaderContainer");
-    setTimeout(() => (loaderContainer.style.display = "none"), 500);
+    setTimeout(() => (loaderContainer.style.display = "none"), 150);
   })();
   if (window.location.pathname === "/") {
     updateDots();
   }
 };
-window.addEventListener("scroll", scrollEvent);
-window.addEventListener("resize", updateDots);
+
+if (window.location.pathname === "/") {
+  window.addEventListener("resize", updateDots);
+}
+
+if (window.location.pathname === "/wofChecks.html") {
+  window.addEventListener("scroll", scrollEvent);
+}

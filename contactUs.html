@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="contactUs.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-top-section">
+          <p>
+            In a hurry? Message us on
+            <a href="tel:021 125 4332">021 125 4332</a> and we’ll get back to
+            you.
+          </p>
+        </div>
+      </div>
+      <div class="overlay">
+        <div class="overlay-text">
+          <div class="navbar">
+            <div class="logo">
+              <img src="./assets/midcity.png" alt="Logo" />
+            </div>
+            <div class="navbar-menu">
+              <div class="mobile-menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i> <span>Menu</span>
+              </div>
+              <ul class="menu-desktop-list">
+                <a href="/"><li>HOME</li></a>
+                <a href="./aboutUs.html"><li>ABOUT US</li></a>
+                <a href="./services.html"> <li>SERVICES</li></a>
+                <a href="./wofChecks.html"><li>WOF CHECKS</li></a>
+                <a href="./cofChecks.html"><li>COF CHECKS</li></a>
+                <a href="./contactUs.html"><li>CONTACT US</li></a>
+              </ul>
+              <ul class="menu-mobile-list">
+                <div class="menu-close" onclick="closeMenu()">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <a href="/"><li>HOME</li></a>
+                <a href="./aboutUs.html"><li>ABOUT US</li></a>
+                <a href="./services.html"> <li>SERVICES</li></a>
+                <a href="./wofChecks.html"><li>WOF CHECKS</li></a>
+                <a href="./cofChecks.html"><li>COF CHECKS</li></a>
+                <a href="./contactUs.html"><li>CONTACT US</li></a>
+              </ul>
+            </div>
+          </div>
+          <div class="heading"><h1>CONTACT US</h1></div>
+        </div>
+      </div>
+      <div class="middle-section">
+        <p>
+          Wanting to book your car in?<strong
+            >Fill out our contact form below to make a booking.</strong
+          >
+        </p>
+        <p>
+          Mid City Auto Repairs Petone services clients from throughout Hutt
+          Valley, Wellington and Kapiti; including Lower Hutt, Upper Hutt,
+          Wellington central, Johnsonville and Porirua. Once you have booked
+          your vehicle in, you can drop it off at any time and pick it up at a
+          time that is convenient for you
+        </p>
+        <div class="contact-section">
+          <div class="form-section">
+            <h3>MID CITY AUTO REPAIRS CONTACT FORM</h3>
+            <form action="./sendInquiry.php" method="POST">
+              <label for="name">Full Name</label>
+              <input type="text" required id="name" minlength="2" />
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+              <label for="number">Phone Number</label>
+              <input id="number" type="number" required minlength="10" />
+              <label for="make">Make And Model Of Vehicle </label>
+              <input type="text" required id="make" />
+              <label for="regNumber">Registration Number</label>
+              <input
+                required
+                id="regNumber"
+                type="text"
+                placeholder="0 of 6 max chrachters."
+              />
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" cols="50" required></textarea>
+              <button type="submit">SUBMIT</button>
+            </form>
+          </div>
+          <div class="address-section">
+            <div class="contact-info">
+              <div>
+                <img src="./assets/smartphone.png" alt="phone" />
+                <p>04 210 1185</p>
+              </div>
+              <div>
+                <img src="./assets/telephone.png" alt="telephone" />
+                <p>021 125 4332</p>
+              </div>
+              <div>
+                <img src="./assets/email.png" alt="email" />
+                <p>mymechanicnz@gmail.com</p>
+              </div>
+              <div>
+                <img src="./assets/maps-and-flags.png" alt="location" />
+                <p>
+                  30 Sydney Street <br />Petone
+                  <br />
+                  Wellington 5012
+                </p>
+              </div>
+              <div>
+                <img src="./assets/time.png" alt="time" />
+                <p>
+                  HOURS <br />
+                  Mon - Fri: 8:30am - 5:30pm <br />
+                  Sat: 8:00am - 3:00pm <br />
+                  Sun - Closed
+                </p>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.8180605894318!2d174.87280497591962!3d-41.22573517132095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38ab951954deab%3A0xacda8f8db9ea6efa!2s30%20Sydney%20Street%2C%20Petone%2C%20Lower%20Hutt%205012!5e0!3m2!1sen!2snz!4v1732973280123!5m2!1sen!2snz"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer-->
+      <div class="footer">
+        <button class="scroll-up" onclick="scrollToTop()">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+
+        <div>
+          <div class="left-footer">
+            <img src="./assets/midcity.png" />
+            <h1>CONTACT US</h1>
+            <a href="tel:021 125 4332"><span>Ph: </span>021 125 4332 </a>
+            <a href=""
+              ><span>A:</span> 30 Sydney Street, Petone Wellington 5012</a
+            >
+          </div>
+          <div class="right-footer">
+            <h1>FOLLOW US</h1>
+            <img src="./assets/facebook.png" />
+            <p>HOURS</p>
+            <p>
+              Mon – Fri: 8:30am – 5:00pm <br />Sat: 8:30am – 2:00pm <br />Sun –
+              9:00am – 12:00pm
+            </p>
+          </div>
+        </div>
+        <div>
+          <span class="copy-right">
+            Copyright 2024 Mid City Auto Repairs <br />
+            Website designed by @ HM
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

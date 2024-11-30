@@ -44,31 +44,34 @@
   position: relative;
   align-items: center;
   padding-left: 50px;
-  justify-content: space-evenly;
+  overflow: hidden;
+  max-width: 1500px;
   margin: 0 auto;
 }
 .profile-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex: 1;
   flex-direction: row-reverse;
-  margin: 100px 0;
+  margin: 100px auto;
   gap: 50px;
+  max-width: 1500px;
 }
 .profile-pic {
   width: 500px;
-  position: absolute;
-  right: 0;
+  position: relative;
+  right: 240px;
 }
 @keyframes carAnimation {
   0% {
-    right: 0px;
+    right: -400px;
     transform: rotate(-15deg);
   }
   90% {
     transform: rotate(-15deg);
   }
   100% {
-    right: 400px;
+    right: 340px;
     transform: rotate(-0deg);
   }
 }
@@ -231,8 +234,8 @@
 
 .scroll-up {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 8px;
+  right: 10px;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.411);
   border: none;
@@ -313,23 +316,13 @@
   border-bottom: 3px solid #fecb0a;
 }
 
-@media (max-width: 3000px) {
-  .middle-section {
-    justify-content: space-between;
-  }
-}
 @media (max-width: 1500px) {
   .middle-section {
     flex-direction: column;
+    align-items: center;
   }
   .profile-pic {
-    position: relative;
-  }
-}
-@media (max-width: 1350px) {
-  .profile-section {
-    flex-direction: column;
-    align-items: center;
+    right: 0px;
   }
 }
 
@@ -339,6 +332,9 @@
   }
   .menu-mobile-list {
     display: flex;
+  }
+  .profile-pic {
+    right: 0px;
   }
 
   .mobile-menu {
