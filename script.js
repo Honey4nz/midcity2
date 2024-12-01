@@ -142,17 +142,14 @@ const getParam = (param) => {
 };
 
 window.onload = () => {
- 
-  (
-    //anonymus function for
-    function () {
-      loader(); //show loader
-      checkLocation();
-      const loaderContainer = document.querySelector(".loaderContainer");
-      setTimeout(() => (loaderContainer.style.display = "none"), 150);
-    }
-  )();
-  if (window.location.pathname === "/") {
+  //anonymus function for
+  (function () {
+    loader(); //show loader
+    checkLocation();
+    const loaderContainer = document.querySelector(".loaderContainer");
+    setTimeout(() => (loaderContainer.style.display = "none"), 150);
+  })();
+  if (window.location.pathname === "/index.html") {
     updateDots();
   }
 
@@ -166,7 +163,7 @@ window.onload = () => {
   }
 };
 
-if (window.location.pathname === "/") {
+if (window.location.pathname === "/index.html") {
   window.addEventListener("resize", updateDots);
 }
 
