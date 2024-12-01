@@ -149,11 +149,11 @@ window.onload = () => {
     const loaderContainer = document.querySelector(".loaderContainer");
     setTimeout(() => (loaderContainer.style.display = "none"), 150);
   })();
-  if (window.location.pathname === "/midcity2/index.html") {
+  if (window.location.pathname === "midcity2/index.html") {
     updateDots();
   }
 
-  if (window.location.pathname === "/midcity2/contactUs.html") {
+  if (window.location.pathname === "midcity2/contactUs.html") {
     const result = getParam("message_sent");
     if (result) {
       alert("Message Sent Successfully");
@@ -163,10 +163,10 @@ window.onload = () => {
   }
 };
 
-if (window.location.pathname === "/midcity2/index.html") {
+if (window.location.pathname === "/midcity2/") {
   window.addEventListener("resize", updateDots);
 }
 
-if (window.location.pathname === "/midcity2/wofChecks.html") {
+if (window.location.pathname === "midcity2/wofChecks.html") {
   window.addEventListener("scroll", scrollEvent);
 }
